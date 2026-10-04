@@ -11,7 +11,7 @@ ignore_missing_imports = true
 [project]
 name = "image-dup-search"
 version = "0.0.0"
-descriprion = "Система поиска дубликатов изображений с использованием методов компьютерного зрения"
+description = "Система поиска дубликатов изображений с использованием методов компьютерного зрения"
 readme = "README.md"
 authors = [
 	{ name = "Kazuma", email = "hmelevski_1948@mail.ru" }
@@ -29,6 +29,7 @@ dev = ["pytest>=8.0"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["src"]
 
 [tool.black]
 target-version = ["py312"]
