@@ -1,7 +1,7 @@
 import imagehash
 import pytest
 
-from dup_search.matrix import build_matrix
+from dup_search.matrix import build_hash_matrix
 
 
 @pytest.fixture
@@ -9,7 +9,7 @@ def matrix() -> list:
     a = imagehash.hex_to_hash("ffffffffffffffff")
     b = imagehash.hex_to_hash("1239181932895171")
     c = imagehash.hex_to_hash("12391819ffffffff")
-    return build_matrix([a, b, c])
+    return build_hash_matrix([a, b, c])
 
 
 def test_diagonal_is_zero(matrix: list) -> None:
