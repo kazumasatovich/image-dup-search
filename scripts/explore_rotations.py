@@ -38,9 +38,8 @@ def main() -> None:
     filenames = []
 
     try:
-        with Image.open(input_path) as img:
-            if img.mode != "RGB":
-                img = img.convert("RGB")
+        with Image.open(input_path) as src:
+            img = src.convert("RGB")
 
             base_name = os.path.splitext(os.path.basename(input_path))[0]
             ext = os.path.splitext(input_path)[1]
