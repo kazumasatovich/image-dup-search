@@ -16,7 +16,7 @@ readme = "README.md"
 authors = [
 	{ name = "Kazuma", email = "hmelevski_1948@mail.ru" }
 ]
-dependencies = ["pillow", "imagehash", "numpy"]
+dependencies = ["pillow", "imagehash", "numpy", "ruff", "black", "mypy"]
 
 [build-system]
 requires = ["setuptools>=61.0"]
