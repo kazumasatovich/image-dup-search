@@ -16,7 +16,7 @@ readme = "README.md"
 authors = [
 	{ name = "Kazuma", email = "hmelevski_1948@mail.ru" }
 ]
-dependencies = ["pillow", "imagehash", "numpy", "ruff", "black", "mypy"]
+dependencies = ["pillow", "imagehash", "numpy"]
 
 [build-system]
 requires = ["setuptools>=61.0"]
@@ -25,7 +25,7 @@ build-backend = "setuptools.build_meta"
 
 
 [project.optional-dependencies]
-dev = ["pytest>=8.0"]
+dev = ["pytest>=8.0", "ruff", "black", "mypy"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
