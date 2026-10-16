@@ -89,10 +89,10 @@
 Чтобы считать метрики на 10 000 картинок, нужна коллекция, где дубликаты известны заранее. Выбраны четыре открытых набора.
 
 | Набор | Что внутри | Объём |
-|---|---|---|---|
-| MIRFLICKR-25000 | 25 000 фото с Flickr | — ||
+|---|---|---|
+| MIRFLICKR-25000 | 25 000 фото с Flickr | — |
 | INRIA Copydays | 157 оригиналов и их правки: JPEG с качеством от 75 до 3, кроп от 10 до 80 %, сильные правки (печать и скан, размытие, перерисовка) | 0,35 ГБ, отдельно кроп — 2 ГБ |
 | INRIA Holidays | 1 491 фото из поездок в 500 группах: одна сцена с поворотом, с другого ракурса, при другом свете, с размытием | 2,7 ГБ |
 
 
-Источники: [California-ND](https://publish.illinois.edu/adsc-vintage/california-nd/), [INRIA Holidays и Copydays](https://lear.inrialpes.fr/~jegou/data.php.html), [MIRFLICKR](https://press.liacs.nl/mirflickr/).
+Источники: [INRIA Holidays и Copydays](https://lear.inrialpes.fr/~jegou/data.php.html), [MIRFLICKR](https://press.liacs.nl/mirflickr/).
