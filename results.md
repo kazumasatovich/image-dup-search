@@ -86,13 +86,18 @@
 
 ## 3. Данные
 
-Чтобы считать метрики на 10 000 картинок, нужна коллекция, где дубликаты известны заранее. Выбраны четыре открытых набора.
+Чтобы считать метрики на 10 000 картинок, нужна коллекция, где дубликаты известны заранее. Выбраны три открытых набора. MIRFLICKR-25000 - фон: генератор делает из его фото копии с правками и сам пишет разметку. INRIA Copydays и Holidays — готовые наборы с разметкой, на них проверяем результат.
 
 | Набор | Что внутри | Объём |
 |---|---|---|
-| MIRFLICKR-25000 | 25 000 фото с Flickr | — |
+| MIRFLICKR-25000 | 25 000 фото с Flickr | 2,9 ГБ |
 | INRIA Copydays | 157 оригиналов и их правки: JPEG с качеством от 75 до 3, кроп от 10 до 80 %, сильные правки (печать и скан, размытие, перерисовка) | 0,35 ГБ, отдельно кроп — 2 ГБ |
 | INRIA Holidays | 1 491 фото из поездок в 500 группах: одна сцена с поворотом, с другого ракурса, при другом свете, с размытием | 2,7 ГБ |
 
 
 Источники: [INRIA Holidays и Copydays](https://lear.inrialpes.fr/~jegou/data.php.html), [MIRFLICKR](https://press.liacs.nl/mirflickr/).
+
+Авторы наборов просят ссылаться на статьи:
+
+- MIRFLICKR-25000 — M. J. Huiskes, M. S. Lew. The MIR Flickr Retrieval Evaluation. ACM MIR 2008.
+- INRIA Holidays — H. Jégou, M. Douze, C. Schmid. Hamming Embedding and Weak Geometric Consistency for Large Scale Image Search. ECCV 2008.
