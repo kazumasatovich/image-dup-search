@@ -8,7 +8,7 @@
     crop        доля отрезанной площади; кроп по центру, пропорции сохраняются
     brightness  множитель яркости, 1 — без изменений
     rotate      угол поворота против часовой стрелки, в градусах
-    blur        радиус размытия по каусу в пикселях
+    blur        радиус размытия по Гауссу в пикселях
 
 Разметка — markup.csv, по строке на каждую картинку набора:
 
@@ -18,7 +18,7 @@
     param   параметр правки; у оригинала пусто
     origin  имя исходного файла MIRFLICKR; только у оригиналов
 
-Метку о дубле генератор ставить не будет, ее установим, с помощью функции сравнения
+Метку о дубле генератор ставить не будет, ее установим, с помощью функции от op и param с порогами
 
 Все картинки сохраняются в PNG.
 """
@@ -73,7 +73,7 @@ class Edit:
     sample: Callable[[random.Random], float]
 
 
-ANGLES = [*range(1, 360)]
+ANGLES = [*range(1, 16), *range(20, 50, 5), 90, 180, 270]
 
 EDITS: dict[str, Edit] = {
     "jpeg": Edit(recompress_jpeg, lambda rng: rng.randint(10, 90)),
@@ -81,7 +81,7 @@ EDITS: dict[str, Edit] = {
     "crop": Edit(crop_center, lambda rng: round(rng.uniform(0.05, 0.5), 3)),
     "brightness": Edit(change_brightness, lambda rng: round(rng.uniform(0.5, 1.5), 3)),
     "rotate": Edit(rotate, lambda rng: rng.choice(ANGLES)),
-    "blur": Edit(blur, lambda rng: round(rng.uniform(0.5, 3.0))),
+    "blur": Edit(blur, lambda rng: round(rng.uniform(0.5, 3.0), 3)),
 }
 
 
